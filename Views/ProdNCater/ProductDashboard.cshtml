@@ -1,0 +1,47 @@
+@model productPackageInfo
+
+<div class="container mt-5">
+    <div class="text-center font-weight-light">
+        <h4 class="d-inline-block"><a href="productDashboard" class="mr-5 btn btn-primary text-light">Products</a></h4>
+        <h4 class="d-inline-block"><a href="categoryDashboard" class="btn btn-success text-light">Categories</a></h4>
+    </div>
+
+    <div class="mt-5">
+        <div class="row">
+            <div class="col-7">
+                <h5 class="text-center">New Product</h5>
+                <hr>
+                <form action="createProduct" method="post">
+                    <div class="form-group">
+                        <label asp-for="product.name"></label>
+                        <input asp-for="product.name" class="form-control">
+                        <small><span asp-validation-for="product.name" class="text-danger font-weight-bold"></span></small>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="product.description"></label>
+                        <input asp-for="product.description" class="form-control">
+                        <small><span asp-validation-for="product.description" class="text-danger font-weight-bold"></span></small>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="product.price"></label>
+                        <input asp-for="product.price" class="form-control">
+                        <small class="text-muted ml-1">We only accept price between $1 - $10,000</small>
+                        <small><span asp-validation-for="product.price" class="text-danger font-weight-bold"></span></small>
+                    </div>
+                    <button type="submit" class="btn btn-primary shadow">Create Product</button>
+                </form>
+            </div>
+            <div class="col-4">
+                <h5 class="text-center">Existing Products</h5>
+                <hr>
+                <ul class="list-inline text-center">
+                    @foreach(var product in Model.allProducts)
+                    {
+                        <li><a href="product/@product.product_id">@product.name</a></li>
+                    }
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
