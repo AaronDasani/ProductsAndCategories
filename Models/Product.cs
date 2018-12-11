@@ -24,12 +24,12 @@ namespace ProductNCatergories.Models
 
         [Required]
         [Display(Name="Product Price")]
-        [Range(1,10000,ErrorMessage="Must be a valid price")]
+        [Range(1,Int32.MaxValue,ErrorMessage="Must be a valid price")]
         public double price{get;set;}
         public DateTime created_at{get;set;}=DateTime.Now;
         public DateTime updated_at{get;set;}=DateTime.Now;
 
-        [NotMapped]
+        
         public List<Association> categories{get;set;}
     }
     public class productPackageInfo

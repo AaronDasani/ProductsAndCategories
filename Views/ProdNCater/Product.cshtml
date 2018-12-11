@@ -1,25 +1,32 @@
 @model productAssociationInfo
 
 <div class="container mt-5">
+    <div class="text-right mb-3">
+        <a href="~/productDashboard" class="btn btn-sm btn-outline-primary">Back</a>
+    </div>
     <h2 class="font-weight-light text-center">@Model.product.name</h2>
     <hr>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-5 mr-3 text-center">
             <h5>Categories:</h5>
-            <ul class="list-inline font-weight-bold">
+
+            <ul class="list-inline font-weight-light">
+                <div class="newCategory"></div>
                 @foreach(var association in Model.product.categories)
                 {
                     <li>@association.category.name</li>
                 }
-            </ul>
+                
+            </ul>               
+
         </div>
-        <div class="col-6">
-            <h6>Add Category</h6>
-            <form action="addCategory" method="post">
+        <div class="col-5">
+            <h6 class="mb-3">Add Category</h6>
+            <form action="~/addCategory" method="post">
                 <div class="form-group">
-                   <label asp-for="association.category_id"></label>
-                    <select asp-for="association.category_id">
+                   
+                    <select asp-for="association.category_id" class="form-control">
                         @foreach(var category in Model.allCategory)
                         {
                             <option value="@category.category_id">@category.name</option>
@@ -27,9 +34,28 @@
                     </select>
                     <small><span asp-validation-for="association.category_id" class="font-weight-bold text-danger"></span></small>
                     <input type="hidden" asp-for="association.product_id" value="@Model.product.product_id">
-                    <button type="submit" class="btn btn-info">Add</button>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-success  mt-4 ">Add</button>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+
+<!-- <script>
+    $("form").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            method:"POST",
+            url:$(this).attr("action"),
+            data:$(this).serialize(),
+            success:function(response){
+                console.log(response);
+                $(".newCategory").append("<li>"+response["name"]+"</li>");
+
+            }
+        });
+    });
+</script> -->

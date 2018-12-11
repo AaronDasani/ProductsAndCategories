@@ -18,7 +18,6 @@ namespace ProductNCatergories.Models
         public DateTime created_at{get;set;}=DateTime.Now;
         public DateTime updated_at{get;set;}=DateTime.Now;  
 
-        [NotMapped]
         public List<Association> products{get;set;}
 
     }

@@ -1,0 +1,42 @@
+@model categoryAssociationInfo
+
+<div class="container mt-5">
+    <div class="text-right mb-3">
+        <a href="~/categoryDashboard" class="btn btn-sm btn-outline-primary">Back</a>
+    </div>
+    <h2 class="font-weight-light text-center">@Model.category.name</h2>
+    <hr>
+
+    <div class="row">
+        <div class="col-5 mr-3 text-center">
+            <h5>Products:</h5>
+            <div class="productList">
+                <ul class="list-inline font-weight-light">
+                    @foreach(var association in Model.category.products)
+                    {
+                        <li>@association.product.name</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-5">
+            <h6 class="mb-3">Add Product</h6>
+            <form action="~/addProduct" method="post">
+                <div class="form-group">
+                   
+                    <select asp-for="association.product_id" class="form-control">
+                        @foreach(var product in Model.allProducts)
+                        {
+                            <option value="@product.product_id">@product.name</option>
+                        }
+                    </select>
+                    <small><span asp-validation-for="association.product_id" class="font-weight-bold text-danger"></span></small>
+                    <input type="hidden" asp-for="association.category_id" value="@Model.category.category_id">
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-success  mt-4 ">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

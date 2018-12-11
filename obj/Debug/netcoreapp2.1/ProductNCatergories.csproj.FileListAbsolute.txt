@@ -14,7 +14,6 @@
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/ProductNCatergories.TagHelpers.input.cache
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/ProductNCatergories.TagHelpers.output.cache
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/ProductNCatergories.RazorCoreGenerate.cache
-/Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/Razor/Views/ProdNCater/Catergory.g.cshtml.cs
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/Razor/Views/ProdNCater/menu.g.cshtml.cs
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/Razor/Views/ProdNCater/Product.g.cshtml.cs
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/Razor/Views/ProdNCater/ProductDashboard.g.cshtml.cs
@@ -28,3 +27,4 @@
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/ProductNCatergories.pdb
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/ProductNCatergories.csproj.CopyComplete
 /Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/Razor/Views/ProdNCater/CategoryDashboard.g.cshtml.cs
+/Users/maad/Desktop/C#_Folder/Web_Section/ProductNCatergories/obj/Debug/netcoreapp2.1/Razor/Views/ProdNCater/Category.g.cshtml.cs

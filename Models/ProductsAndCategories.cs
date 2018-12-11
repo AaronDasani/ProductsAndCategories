@@ -21,9 +21,15 @@ namespace ProductNCatergories.Models
         public Category category{get;set;}
     }
     public class productAssociationInfo
-    {
+    { 
         public Association association{get;set;}=new Association();
         public Product product{get;set;}
         public List<Category> allCategory{get;set;}
+    }
+    public class categoryAssociationInfo
+    { 
+        public Association association{get;set;}=new Association();
+        public Category category{get;set;}
+        public List<Product> allProducts{get;set;}
     }
 }
